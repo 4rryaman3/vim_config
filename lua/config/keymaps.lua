@@ -22,4 +22,6 @@ vim.keymap.set("v", "<A-Up>", "y'<P", { noremap = true, silent = true })
 
 vim.opt.clipboard = "unnamedplus"
 
+local repo = require("custom-function")
+vim.keymap.set("n", "<leader>tc", repo.ToggleCaseMode, { desc = "Toggle Telescope case_mode" })
 
