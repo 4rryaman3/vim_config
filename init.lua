@@ -3,10 +3,14 @@ require("keymap")
 require("options")
 require("config.lazy") 
 require("config.keymaps")
--- require("config.custom-dashbord")
+require("config.custom-dashbord")
 require'nvim-tree'.setup {
   view = {
     side = 'right',  
     width = 30,     
   },
 }
+require("mason").setup()
+require("mason-lspconfig").setup()
+require("lspconfig").lua_ls.setup {}
+require('config.lsp-config')
